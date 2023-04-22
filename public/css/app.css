@@ -211,8 +211,17 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
-
+.box-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+}
 .ads-img {
+  width: 90px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +232,8 @@ header {
   margin-top: 10px;
 }
 .ads-img img {
-  width: 90px;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width:651px) {
   .box-3 .container {
@@ -233,7 +243,7 @@ header {
     padding: 20px 0;
     height: 100%;
   }
-     .box-ads{
+     .box-content{
       margin-top: 10px;
      }
 }
