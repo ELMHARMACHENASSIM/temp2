@@ -78,33 +78,67 @@ header {
   color: white;
   text-align: center;
 }
+.nav-btn {
+  width: 30px;
+  height: 30px;
+  color: white;
+  border: 1px solid #fff;
+}
+.mobile-nav {
+  display: none;
+}
+.mobile-nav i {
+  font-size: 20px;
+}
+
 /* media query header */
 @media (max-width: 651px) {
   header {
     flex-direction: column;
-    height: 120px;
+    height: auto;
   }
   .navbar {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .box-header {
-    width: 20px;
-  }
-  .box-header .box-img-h {
-    width: 30px;
-    height: 30px;
     display: none;
   }
-  .box-header .box-img-h img {
-    width: 100%;
-    height: 100%;
+  .box-title-h {
+    margin: 5px 0;
   }
-  .box-title-h p {
-    font-size: 10px;
+  .box-title-h a {
+    color: white;
+    font-size: 25px;
+  }
+  .mobile-nav {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+  }
+  .mobile-nav .navbar-mobile {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    display: none;
+  }
+  .nav-btn {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink-color);
+    font-size: 20px;
+  }
+
+  .nav-btn:hover + .navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
+
 /* start query section one */
 .section-one {
   display: flex;
@@ -170,7 +204,6 @@ header {
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
- 
 }
 .box-abt {
   width: 100%;
@@ -185,13 +218,13 @@ header {
   line-height: 25px;
 }
 /* media query section-two */
-@media (max-width:651px) {
-  .box-abt{
+@media (max-width: 651px) {
+  .box-abt {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .abt-para{
+  .abt-para {
     margin-top: 20px;
     width: 100%;
     text-align: center;
@@ -211,7 +244,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
-.box-content{
+.box-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -236,17 +269,17 @@ header {
   height: 100%;
 }
 /* media query box-3*/
-@media (max-width:651px) {
+@media (max-width: 651px) {
   .box-3 .container {
- flex-direction: column;
+    flex-direction: column;
   }
-  .box-3{
+  .box-3 {
     padding: 20px 0;
     height: 100%;
   }
-     .box-content{
-      margin-top: 25px;
-     }
+  .box-content {
+    margin-top: 25px;
+  }
 }
 /* footer */
 .footer {
@@ -295,7 +328,7 @@ header {
     flex-direction: column;
     text-align: center;
   }
-  .box-1{
+  .box-1 {
     margin-top: 25px;
   }
 }
